@@ -40,6 +40,12 @@
       .text-link { color: #5e6ebf }
 
       @media screen and (max-width:600px) {
+        .h2-headers div {
+          padding-top:10px !important;
+          font-size:14px !important;
+          text-align:center !important;
+        }
+
         .column-space:first-child {
           padding-bottom:50px !important;
         }
