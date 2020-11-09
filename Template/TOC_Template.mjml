@@ -8,22 +8,51 @@
       <mj-text font-size="15px" color="#3F4F5E" line-height="25px" font-family="'Montserrat', Helvetica, Arial, sans-serif"></mj-text>
       <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Montserrat', Helvetica, Arial, sans-serif"></mj-text>
     </mj-attributes>
+    <mj-style inline="inline">
+    .section-header div {
+        text-transform:uppercase;
+        padding-bottom:10px;
+        padding-left:10px;
+      }
+    </mj-style>
     <mj-style>
+      .column-space {
+        padding:0 !important;
+      }
+      .h2-headers {
+        padding-top:10px !important;
+        padding-left:0px !important;
+        padding-right:0px !important;
+      }
+
       .btn a, .btn td {
         font-size:16px !important;
         font-weight:500 !important;
         border-radius:8px !important;
+        background-color:#F5F4FA !important;
+        color:#4D26E8 !important;
       }
 
       .btn a:hover {
         color:#FFF !important;
-        background-color:#8F8AA7 !important;
+        background-color:#4D26E8 !important;
       }
       .text-link { color: #5e6ebf }
 
       @media screen and (max-width:600px) {
+        .column-space:first-child {
+          padding-bottom:50px !important;
+        }
+        .section-spacer {
+          display:none !important;
+        }
         .body-section td {
           padding-top:0 !important;
+        }
+      
+        .email-header div {
+          font-size:18px !important;
+          line-height:30px !important;
         }
 
         .btn a {
@@ -37,28 +66,29 @@
         }
       }
     </mj-style>
-    <mj-style inline="inline">
-      .footer-link { color: #888888 }
-    </mj-style>
     <mj-style>
+    .footer-link { color: #888888 }
     .cover-img img {
       border-radius:8px !important;
     }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#fafafa" width="600px">
+  <mj-body background-color="#f4f4f6" width="600px">
+    <!-- Header -->
     <mj-section full-width="full-width" background-color="#fff">
       <mj-column width="100%">
         <mj-image src="https://f.hubspotusercontent20.net/hubfs/4636824/TOC/Assets/Main/Logo/TOC_Logo_2000x530.png" alt="The Oncology Connection Logo" href="http://theoncologyconnection.com/" padding="0px" />
         <mj-text color="#545584" font-weight="500" align="center" font-size="16px" letter-spacing="1px" padding-top="0px">
-          Monday, November 9, 2020
+          Monday, November 09, 2020
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-wrapper padding-top="40px" padding-bottom="0" css-class="body-section">
+
+    <!-- Main Article -->
+    <mj-wrapper padding-top="20px" padding-bottom="0" css-class="body-section">
       <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px">
         <mj-column width="100%">
-          <mj-text color="#545584" font-weight="bold" font-size="24px" align="center" line-height="35px">
+          <mj-text color="#4D26E8" font-weight="bold" font-size="24px" align="center" line-height="35px" css-class="email-header">
             APP Oncology Summit Is an awesome Conference filled with great content!
           </mj-text>
           <mj-image src="https://via.placeholder.com/500x200" css-class="cover-img" />
@@ -68,24 +98,53 @@
           <mj-text color="#818181" font-size="14px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis.
           </mj-text>
-          <mj-button css-class="btn" background-color="#F5F4FA" color="#8F8AA7" align="center" href="https://google.com" width="180px">
+          <mj-button css-class="btn" align="center" href="https://google.com">
             Read More...
           </mj-button>
         </mj-column>
       </mj-section>
-      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding-top="0">
-        <mj-column width="50%">
-          <mj-image align="center" src="https://res.cloudinary.com/dheck1ubc/image/upload/v1544153577/Email/Images/AnnouncementOffset/Image_1.png" alt="" />
-        </mj-column>
-        <mj-column width="50%">
-          <mj-image align="center" src="https://res.cloudinary.com/dheck1ubc/image/upload/v1544153578/Email/Images/AnnouncementOffset/Image_2.png" alt="" />
+
+      <!-- Section Spacer -->
+      <mj-section background-color="#f4f4f6" padding="0" css-class="section-spacer">
+        <mj-column padding='0'>
+          <mj-spacer height="15px" />
         </mj-column>
       </mj-section>
-      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding-top="0">
+
+      <mj-section padding="25px 0px 0px 0px" background-color="#fff">
+        <mj-column padding="0px">
+          <mj-text css-class="section-header" color="#4D26E8" font-weight="550">
+            In Case you Missed It!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- In case you missed it -->
+      <mj-section background-color="#fff" padding="0 35px 35px 35px" full-width="full-width">
+        <mj-column css-class="column-space">
+          <mj-image align="center" src="https://via.placeholder.com/500x250" alt="" padding="0px 15px 0px 0px" css-class="cover-img" />
+          <mj-text css-class="h2-headers">Conferences like APP Oncology Summit</mj-text>
+          <mj-button css-class="btn" href="#" align="center" padding-bottom="0">Read More</mj-button>
+        </mj-column>
+        <mj-column css-class="column-space">
+          <mj-image align="center" src="https://via.placeholder.com/500x250" alt="" padding="0px 0px 0px 15px" css-class="cover-img" />
+          <mj-text css-class="h2-headers">Conferences like APP Oncology Summit</mj-text>
+          <mj-button css-class="btn" href="#" align="center" padding-bottom="0">Read More</mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Section Spacer -->
+      <mj-section background-color="#f4f4f6" padding="0" css-class="section-spacer">
+        <mj-column padding='0'>
+          <mj-spacer height="15px" />
+        </mj-column>
+      </mj-section>
+      <!-- <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding-top="0">
         <mj-column width="100%">
           <mj-divider border-color="#DFE3E8" border-width="1px" />
         </mj-column>
-      </mj-section>
+      </mj-section> -->
+
       <mj-section background-color="#ffffff" padding="0 15px 0 15px">
         <mj-column width="100%">
           <mj-text color="#212b35" font-weight="bold" font-size="20px" padding-bottom="0">
@@ -127,13 +186,13 @@
       <mj-section>
         <mj-column width="100%" padding="0">
           <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center">
-            <mj-social-element name="facebook" href="https://mjml.io/" background-color="#A1A0A0">
+            <mj-social-element name="facebook" href="https://mjml.io/" background-color="#545584">
             </mj-social-element>
-            <mj-social-element name="google" href="https://mjml.io/" background-color="#A1A0A0">
+            <mj-social-element name="instagram" href="https://mjml.io/" background-color="#545584">
             </mj-social-element>
-            <mj-social-element name="twitter" href="https://mjml.io/" background-color="#A1A0A0">
+            <mj-social-element name="twitter" href="https://mjml.io/" background-color="#545584">
             </mj-social-element>
-            <mj-social-element name="linkedin" href="https://mjml.io/" background-color="#A1A0A0">
+            <mj-social-element name="linkedin" href="https://mjml.io/" background-color="#545584">
             </mj-social-element>
           </mj-social>
           <mj-text color="#445566" font-size="11px" font-weight="bold" align="center">
