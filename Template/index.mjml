@@ -1,5 +1,6 @@
 <mjml>
   <mj-head>
+    <mj-breakpoint width="600px" />
     <mj-title>The Oncology Connection</mj-title>
     <mj-preview>Issue 001 - November 8, 2020</mj-preview>
     <mj-font name="Montserrat" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&display=swap" />
@@ -8,21 +9,40 @@
       <mj-text font-size="15px" color="#3F4F5E" line-height="25px" font-family="'Montserrat', Helvetica, Arial, sans-serif"></mj-text>
       <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Montserrat', Helvetica, Arial, sans-serif"></mj-text>
     </mj-attributes>
-    <mj-style inline="inline">
-    .section-header div {
-        text-transform:uppercase;
-        padding-bottom:10px;
-        padding-left:10px;
-      }
-    </mj-style>
     <mj-style>
       .column-space {
         padding:0 !important;
       }
-      .h2-headers {
-        padding-top:10px !important;
+
+      .email-header {
+        padding:0 15px 0px 15px!important;
+      }
+
+      .section-wrap {
+        padding-top:15px !important;
+        padding-bottom:15px !important;
+      }
+
+      .section-header div {
+        color:#4D26E8 !important;
+        font-weight:550 !important;
+        text-transform:uppercase;
+        padding-bottom:10px;
+      }
+
+      .h2-header div {
+        padding-top:0px !important;
         padding-left:0px !important;
         padding-right:0px !important;
+        text-align:center !important;
+        font-weight:500 !important;
+        color:#545584 !important;
+      }
+
+      .body-text div {
+        padding:0 !important;
+        font-size:14px !important;
+        color:#818181 !important;
       }
 
       .btn a, .btn td {
@@ -37,23 +57,18 @@
         color:#FFF !important;
         background-color:#4D26E8 !important;
       }
+
       .text-link { color: #5e6ebf }
 
       @media screen and (max-width:600px) {
-        .h2-headers div {
+        .h2-header div {
           padding-top:10px !important;
           font-size:14px !important;
           text-align:center !important;
         }
 
-        .column-space:first-child {
-          padding-bottom:50px !important;
-        }
         .section-spacer {
           display:none !important;
-        }
-        .body-section td {
-          padding-top:0 !important;
         }
       
         .email-header div {
@@ -90,22 +105,29 @@
       </mj-column>
     </mj-section>
 
+    <!-- Section Spacer -->
+    <mj-section background-color="#f4f4f6" padding="0" css-class="section-spacer">
+      <mj-column padding='0'>
+        <mj-spacer height="15px" />
+      </mj-column>
+    </mj-section>
+
     <!-- Main Article -->
-    <mj-wrapper padding-top="20px" padding-bottom="0" css-class="body-section">
-      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px">
+    <mj-wrapper padding="0px">
+      <mj-section background-color="#ffffff" css-class="section-wrap">
         <mj-column width="100%">
           <mj-text color="#4D26E8" font-weight="bold" font-size="24px" align="center" line-height="35px" css-class="email-header">
             APP Oncology Summit Is an awesome Conference filled with great content!
           </mj-text>
-          <mj-image src="https://via.placeholder.com/500x200" css-class="cover-img" />
+          <mj-image src="https://via.placeholder.com/500x200?text=Main%20Article%20Cover" css-class="cover-img" />
           <mj-text color="#545584" font-size="14px" font-weight="500" padding-top="0" padding-bottom="0">
             Written By Brian Moreno <img src="https://via.placeholder.com/100x100" width="15px" padding="0" />
           </mj-text>
-          <mj-text color="#818181" font-size="14px">
+          <mj-text css-class="body-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis.
           </mj-text>
           <mj-button css-class="btn" align="center" href="https://google.com">
-            Read More...
+            Read More
           </mj-button>
         </mj-column>
       </mj-section>
@@ -117,26 +139,32 @@
         </mj-column>
       </mj-section>
 
-      <mj-section padding="25px 0px 0px 0px" background-color="#fff">
+      <mj-section background-color="#fff" padding="0px">
         <mj-column padding="0px">
-          <mj-text css-class="section-header" color="#4D26E8" font-weight="550">
+          <mj-text css-class="section-header" padding-left="30px">
             In Case you Missed It!
           </mj-text>
         </mj-column>
       </mj-section>
 
       <!-- In case you missed it -->
-      <mj-section background-color="#fff" padding="0 35px 35px 35px" full-width="full-width">
-        <mj-column css-class="column-space">
-          <mj-image align="center" src="https://via.placeholder.com/500x250" alt="" padding="0px 15px 0px 0px" css-class="cover-img" />
-          <mj-text css-class="h2-headers">Conferences like APP Oncology Summit</mj-text>
-          <mj-button css-class="btn" href="#" align="center" padding-bottom="0">Read More</mj-button>
-        </mj-column>
-        <mj-column css-class="column-space">
-          <mj-image align="center" src="https://via.placeholder.com/500x250" alt="" padding="0px 0px 0px 15px" css-class="cover-img" />
-          <mj-text css-class="h2-headers">Conferences like APP Oncology Summit</mj-text>
-          <mj-button css-class="btn" href="#" align="center" padding-bottom="0">Read More</mj-button>
-        </mj-column>
+      <mj-section background-color="#fff" padding="0px 30px 0px 30px">
+        <mj-group>
+          <mj-column css-class="column-space">
+            <mj-image align="center" src="https://via.placeholder.com/500x250?text=Article%20Cover%201" alt="" padding="0px 15px 0px 0px" css-class="cover-img" />
+            <mj-text css-class="h2-header">Conferences like APP Oncology Summit</mj-text>
+            <mj-button css-class="btn" align="center" href="https://google.com">
+              Read More
+            </mj-button>
+          </mj-column>
+          <mj-column css-class="column-space">
+            <mj-image align="center" src="https://via.placeholder.com/500x250?text=Article%20Cover%202" alt="" padding="0px 0px 0px 15px" css-class="cover-img" />
+            <mj-text css-class="h2-header">Conferences like APP Oncology Summit</mj-text>
+            <mj-button css-class="btn" align="center" href="https://google.com">
+              Read More
+            </mj-button>
+          </mj-column>
+        </mj-group>
       </mj-section>
 
       <!-- Section Spacer -->
@@ -151,39 +179,14 @@
         </mj-column>
       </mj-section> -->
 
-      <mj-section background-color="#ffffff" padding="0 15px 0 15px">
+      <!-- More About Author -->
+      <mj-section background-color="#ffffff" css-class="section-wrap">
         <mj-column width="100%">
-          <mj-text color="#212b35" font-weight="bold" font-size="20px" padding-bottom="0">
-            Come see us!
+          <mj-image src="https://via.placeholder.com/200x200?text=Author%20Pic" height="100px" width="100px" border-radius="60px" />
+          <mj-text css-class="section-header" align="center" padding-bottom="0">More About the Author</mj-text>
+          <mj-text css-class="body-text" padding-top="0" align="center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis pulvinar, urna neque gravida nisi, eu hendrerit lectus leo
           </mj-text>
-          <mj-text color="#637381" font-size="16px">
-            We're looking forward to meeting you.
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px">
-        <mj-column width="50%">
-          <mj-text color="#212b35" font-size="12px" text-transform="uppercase" font-weight="bold" padding-bottom="0">
-            address
-          </mj-text>
-          <mj-text color="#637381" font-size="14px" padding-top="0">
-            Austin Convention Center
-            <br/> 123 Main Street, 78701
-          </mj-text>
-        </mj-column>
-        <mj-column width="50%">
-          <mj-text color="#212b35" font-size="12px" text-transform="uppercase" font-weight="bold" padding-bottom="0">
-            Hours of Operation
-          </mj-text>
-          <mj-text color="#637381" font-size="14px" padding-top="0">
-            Monday, December 20th: 8:00AM - 5:00PM
-            <br/> Tuesday, December 21st: 8:00AM - 5:00PM
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px">
-        <mj-column width="100%">
-          <mj-image src="https://res.cloudinary.com/dheck1ubc/image/upload/v1544153579/Email/Images/AnnouncementOffset/map.jpg" alt="" />
         </mj-column>
       </mj-section>
     </mj-wrapper>
