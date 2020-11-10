@@ -42,6 +42,11 @@
         text-transform:uppercase;
       }
 
+      .section-headerCustom div {
+        font-weight:550 !important;
+        text-transform:uppercase;
+      }
+
       .section-headerDark div {
         color:#fff !important;
         font-weight:550 !important;
@@ -83,6 +88,20 @@
         color:#FFF !important;
         background-color:#4D26E8 !important;
       }
+
+      .btn-invert a{
+        font-size:16px !important;
+        font-weight:500 !important;
+        border-radius:8px !important;
+        color:#fff !important;
+        border:1px solid white !important;
+      }
+
+      .btn-invert a:hover {
+        color:#000 !important;
+        background-color:#fff !important;
+      }
+
       .text-link { color: #5e6ebf }
 
       .tag {
@@ -256,9 +275,14 @@
       </mj-section>
     
       <!-- More About Author -->
-      <mj-section background-color="#3F4F5E" css-class="section-wrap">
+      <mj-section background-color="#fff" css-class="section-wrap">
         <mj-column>
-          <mj-text css-class="section-headerDark" color="#FFF" align="center" padding-bottom="0">The APP Oncology Summit 2021</mj-text>
+          <mj-image src="https://f.hubspotusercontent20.net/hubfs/4636824/social_media/Horizon_Logos/APP-logo.png" width='400px' padding-bottom="0"/>
+          <mj-text css-class="section-headerCustom" color="#3F4F5E" align="center" padding-bottom="0">A Conference Planned with and for<br/>Advanced Practice Providers</mj-text>
+          <mj-text css-class="section-subheader" align="center" padding-bottom="0">Early Bird Pricing now available!</mj-text>
+          <mj-button css-class="btn" align="center" href="https://google.com" background-color="#3F4F5E">
+            Register Now
+          </mj-button>
         </mj-column>
       </mj-section>
     </mj-wrapper>
