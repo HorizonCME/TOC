@@ -15,19 +15,30 @@
       }
 
       .email-header {
-        padding:0 15px 0px 15px!important;
+        padding:0 15px 15px 15px!important;
       }
 
       .section-wrap {
         padding-top:15px !important;
         padding-bottom:15px !important;
+        border-radius:8px !important;
       }
+
+      .radius-top table, .radius-top {border-top-right-radius:8px !important;border-top-left-radius:8px !important;}
+      .radius-bottom table, .radius-bottom {border-bottom-right-radius:8px !important;border-bottom-left-radius:8px !important;}
 
       .section-header div {
         color:#4D26E8 !important;
         font-weight:550 !important;
         text-transform:uppercase;
-        padding-bottom:10px;
+      }
+
+      .section-subheader div {
+        color:#A19CB8 !important;
+        font-weight:550 !important;
+        font-size:14px !important;
+        text-transform:uppercase !important;
+        padding-bottom:15px !important;
       }
 
       .h2-header div {
@@ -66,6 +77,12 @@
           font-size:14px !important;
           text-align:center !important;
         }
+
+        .section-wrap {
+          border-radius:0px !important;
+        }
+
+        .radius-top, .radius-top {border-radius:0 !important;}
 
         .section-spacer {
           display:none !important;
@@ -124,7 +141,7 @@
             Written By Brian Moreno <img src="https://via.placeholder.com/100x100" width="15px" padding="0" />
           </mj-text>
           <mj-text css-class="body-text" padding="0 30px 0 30px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis...
           </mj-text>
           <mj-button css-class="btn" align="center" href="https://google.com">
             Read More
@@ -139,16 +156,16 @@
         </mj-column>
       </mj-section>
 
-      <mj-section background-color="#fff" padding="20px 0 0 0">
+      <mj-section background-color="#fff" padding="20px 0 15px 0" css-class="radius-top">
         <mj-column padding="0px">
-          <mj-text css-class="section-header" padding-left="30px">
+          <mj-text css-class="section-header" align='center'>
             In Case you Missed It!
           </mj-text>
         </mj-column>
       </mj-section>
 
       <!-- In case you missed it -->
-      <mj-section background-color="#fff" padding="0px 30px 25px 30px">
+      <mj-section background-color="#fff" padding="0px 30px 25px 30px" css-class="radius-bottom">
         <mj-group>
           <mj-column css-class="column-space">
             <mj-image align="center" src="https://via.placeholder.com/500x250?text=Article%20Cover%201" alt="" padding="0px 15px 0px 0px" css-class="cover-img" />
@@ -183,7 +200,8 @@
       <mj-section background-color="#ffffff" css-class="section-wrap">
         <mj-column width="100%">
           <mj-image src="https://via.placeholder.com/200x200?text=Author%20Pic" height="100px" width="100px" border-radius="60px" />
-          <mj-text css-class="section-header" align="center" padding-bottom="0">More About the Author</mj-text>
+          <mj-text css-class="section-header" align="center" padding-bottom="0">About the Author</mj-text>
+          <mj-text css-class="section-subheader" align="center" padding="0">BCOP, PhD</mj-text>
           <mj-text css-class="body-text" padding-top="0" align="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis pulvinar, urna neque gravida nisi, eu hendrerit lectus leo
           </mj-text>
@@ -204,14 +222,11 @@
             <mj-social-element name="linkedin" href="https://mjml.io/" background-color="#545584">
             </mj-social-element>
           </mj-social>
-          <mj-text color="#445566" font-size="11px" font-weight="bold" align="center">
-            View this email in your browser
+          <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
+            You are receiving this email advertisement because you registered with The Oncology Connection and agreed to receive emails from us regarding new features, events and special offers.
           </mj-text>
           <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
-            You are receiving this email advertisement because you registered with Croft's Accountants. (123 Main Street, Austin, TX 78701) and agreed to receive emails from us regarding new features, events and special offers.
-          </mj-text>
-          <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
-            &copy; Croft's Accountants Inc., All Rights Reserved.
+            &copy; Horizon CME, All Rights Reserved.
           </mj-text>
         </mj-column>
       </mj-section>
@@ -219,7 +234,7 @@
         <mj-group>
           <mj-column width="100%" padding-right="0">
             <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
-              <a class="footer-link" href="https://www.google.com">Privacy</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+              <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
             </mj-text>
           </mj-column>
         </mj-group>
