@@ -120,10 +120,10 @@
             APP Oncology Summit Is an awesome Conference filled with great content!
           </mj-text>
           <mj-image src="https://via.placeholder.com/500x200?text=Main%20Article%20Cover" css-class="cover-img" />
-          <mj-text color="#545584" font-size="14px" font-weight="500" padding-top="0" padding-bottom="0">
+          <mj-text color="#545584" font-size="14px" font-weight="500" padding="0 0 0 30px">
             Written By Brian Moreno <img src="https://via.placeholder.com/100x100" width="15px" padding="0" />
           </mj-text>
-          <mj-text css-class="body-text">
+          <mj-text css-class="body-text" padding="0 30px 0 30px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis.
           </mj-text>
           <mj-button css-class="btn" align="center" href="https://google.com">
@@ -139,7 +139,7 @@
         </mj-column>
       </mj-section>
 
-      <mj-section background-color="#fff" padding="0px">
+      <mj-section background-color="#fff" padding="20px 0 0 0">
         <mj-column padding="0px">
           <mj-text css-class="section-header" padding-left="30px">
             In Case you Missed It!
@@ -148,7 +148,7 @@
       </mj-section>
 
       <!-- In case you missed it -->
-      <mj-section background-color="#fff" padding="0px 30px 0px 30px">
+      <mj-section background-color="#fff" padding="0px 30px 25px 30px">
         <mj-group>
           <mj-column css-class="column-space">
             <mj-image align="center" src="https://via.placeholder.com/500x250?text=Article%20Cover%201" alt="" padding="0px 15px 0px 0px" css-class="cover-img" />
