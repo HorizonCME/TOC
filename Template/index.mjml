@@ -291,13 +291,13 @@
       <mj-section>
         <mj-column width="100%" padding="0">
           <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center">
-            <mj-social-element name="facebook" href="https://mjml.io/" background-color="#545584">
+            <mj-social-element name="facebook" href="https://www.facebook.com/horizoncme" background-color="#545584">
             </mj-social-element>
-            <mj-social-element name="instagram" href="https://mjml.io/" background-color="#545584">
+            <mj-social-element name="instagram" href="https://www.instagram.com/horizoncme/" background-color="#545584">
             </mj-social-element>
-            <mj-social-element name="twitter" href="https://mjml.io/" background-color="#545584">
+            <mj-social-element name="twitter" href="https://twitter.com/horizoncme/" background-color="#545584">
             </mj-social-element>
-            <mj-social-element name="linkedin" href="https://mjml.io/" background-color="#545584">
+            <mj-social-element name="linkedin" href="https://www.linkedin.com/company/horizoncme/" background-color="#545584">
             </mj-social-element>
           </mj-social>
           <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
