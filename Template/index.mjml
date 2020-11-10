@@ -10,12 +10,21 @@
       <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Montserrat', Helvetica, Arial, sans-serif"></mj-text>
     </mj-attributes>
     <mj-style>
+      a {
+        text-decoration:none !important;
+        color:#4D26E8 !important;
+      }
+
+      a:hover {
+        color:#9CD3FA !important;
+      }
+
       .column-space {
         padding:0 !important;
       }
 
       .email-header {
-        padding:0 15px 15px 15px!important;
+        padding:0 0px 15px 0px!important;
       }
 
       .section-wrap {
@@ -33,6 +42,12 @@
         text-transform:uppercase;
       }
 
+      .section-headerDark div {
+        color:#fff !important;
+        font-weight:550 !important;
+        text-transform:uppercase;
+      }
+
       .section-subheader div {
         color:#A19CB8 !important;
         font-weight:550 !important;
@@ -44,7 +59,7 @@
       .h2-header div {
         padding-top:0px !important;
         padding-left:0px !important;
-        padding-right:0px !important;
+        padding-right:0px !important
         text-align:center !important;
         font-weight:500 !important;
         color:#545584 !important;
@@ -68,8 +83,35 @@
         color:#FFF !important;
         background-color:#4D26E8 !important;
       }
-
       .text-link { color: #5e6ebf }
+
+      .tag {
+        padding:0px !important;
+      }
+
+      .tag a {
+        margin-right:10px !important;
+        font-size:11px !important;
+        padding:2px 6px !important;
+        border-radius:5px;
+        color:#FFF !important;
+      }
+
+      .tag a:hover {
+        opacity:0.7 !important;
+      }
+
+      .tag-health {
+        background:#F74C29 !important;
+      }
+
+      .tag-oncology {
+        background:#795BF2 !important;
+      }
+
+      .tag-tech {
+        background:#1F9CEA !important;
+      }
 
       @media screen and (max-width:600px) {
         .h2-header div {
@@ -132,15 +174,16 @@
     <!-- Main Article -->
     <mj-wrapper padding="0px">
       <mj-section background-color="#ffffff" css-class="section-wrap">
-        <mj-column width="100%">
-          <mj-text color="#4D26E8" font-weight="bold" font-size="24px" align="center" line-height="35px" css-class="email-header">
-            APP Oncology Summit Is an awesome Conference filled with great content!
+        <mj-column width="100%" padding="0px 30px">
+          <mj-text color="#4D26E8" font-weight="bold" font-size="24px" align="center" line-height="35px" css-class="email-header" padding='0'>
+            <a href="#">APP Oncology Summit Is an awesome Conference filled with great content!</a>
           </mj-text>
-          <mj-image src="https://via.placeholder.com/500x200?text=Main%20Article%20Cover" css-class="cover-img" />
-          <mj-text color="#545584" font-size="14px" font-weight="500" padding="0 0 0 30px">
-            Written By Brian Moreno <img src="https://via.placeholder.com/100x100" width="15px" padding="0" />
+          <mj-image src="https://via.placeholder.com/500x200?text=Main%20Article%20Cover" css-class="cover-img" padding='0 0 5px 0'/>
+          <mj-text css-class="tag"><a class="tag-health" href="#">Health</a><a class="tag-oncology" href="#">Oncology</a><a href="#" class="tag-tech">Tech</a></mj-text>
+          <mj-text color="#545584" font-size="14px" font-weight="500" padding="0">
+            Written By Brian Moreno
           </mj-text>
-          <mj-text css-class="body-text" padding="0 30px 0 30px">
+          <mj-text css-class="body-text" padding="5px 0px 0 0px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis...
           </mj-text>
           <mj-button css-class="btn" align="center" href="https://google.com">
@@ -170,6 +213,7 @@
           <mj-column css-class="column-space">
             <mj-image align="center" src="https://via.placeholder.com/500x250?text=Article%20Cover%201" alt="" padding="0px 15px 0px 0px" css-class="cover-img" />
             <mj-text css-class="h2-header">Conferences like APP Oncology Summit</mj-text>
+            <mj-text css-class="tag" align="center"><a href="#" class="tag-oncology">Oncology</a><a href="#" class="tag-tech">Tech</a></mj-text>
             <mj-button css-class="btn" align="center" href="https://google.com">
               Read More
             </mj-button>
@@ -177,6 +221,7 @@
           <mj-column css-class="column-space">
             <mj-image align="center" src="https://via.placeholder.com/500x250?text=Article%20Cover%202" alt="" padding="0px 0px 0px 15px" css-class="cover-img" />
             <mj-text css-class="h2-header">Conferences like APP Oncology Summit</mj-text>
+            <mj-text css-class="tag" align="center"><a href="#" class="tag-health">Health</a><a href="#" class="tag-tech">Tech</a></mj-text>
             <mj-button css-class="btn" align="center" href="https://google.com">
               Read More
             </mj-button>
@@ -190,11 +235,6 @@
           <mj-spacer height="15px" />
         </mj-column>
       </mj-section>
-      <!-- <mj-section background-color="#ffffff" padding-left="15px" padding-right="15px" padding-top="0">
-        <mj-column width="100%">
-          <mj-divider border-color="#DFE3E8" border-width="1px" />
-        </mj-column>
-      </mj-section> -->
 
       <!-- More About Author -->
       <mj-section background-color="#ffffff" css-class="section-wrap">
@@ -205,6 +245,20 @@
           <mj-text css-class="body-text" padding-top="0" align="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et luctus leo. Phasellus ut maximus nulla. Curabitur cursus placerat cursus. Quisque dignissim, purus ac convallis pulvinar, urna neque gravida nisi, eu hendrerit lectus leo
           </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Section Spacer -->
+      <mj-section background-color="#f4f4f6" padding="0" css-class="section-spacer">
+        <mj-column padding='0'>
+          <mj-spacer height="15px" />
+        </mj-column>
+      </mj-section>
+    
+      <!-- More About Author -->
+      <mj-section background-color="#3F4F5E" css-class="section-wrap">
+        <mj-column>
+          <mj-text css-class="section-headerDark" color="#FFF" align="center" padding-bottom="0">The APP Oncology Summit 2021</mj-text>
         </mj-column>
       </mj-section>
     </mj-wrapper>
@@ -226,7 +280,7 @@
             You are receiving this email advertisement because you registered with The Oncology Connection and agreed to receive emails from us regarding new features, events and special offers.
           </mj-text>
           <mj-text color="#445566" font-size="11px" align="center" line-height="16px">
-            &copy; Horizon CME, All Rights Reserved.
+            {{ site_settings.company_name }}, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }}, {{ site_settings.company_state }} {{ site_settings.company_zip }} {{ site_settings.company_country }}, {{ site_settings.company_phone }}
           </mj-text>
         </mj-column>
       </mj-section>
@@ -234,13 +288,11 @@
         <mj-group>
           <mj-column width="100%" padding-right="0">
             <mj-text color="#445566" font-size="11px" align="center" line-height="16px" font-weight="bold">
-              <a class="footer-link" href="https://www.google.com">Unsubscribe</a>
+              <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">Manage preferences or unsubscribe here</a>
             </mj-text>
           </mj-column>
         </mj-group>
-
       </mj-section>
     </mj-wrapper>
-
   </mj-body>
 </mjml>
